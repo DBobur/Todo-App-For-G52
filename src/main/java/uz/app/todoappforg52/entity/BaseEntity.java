@@ -1,4 +1,14 @@
 package uz.app.todoappforg52.entity;
 
-public class BaseEntity {
+import lombok.Getter;
+
+import java.util.UUID;
+
+@Getter
+public abstract class BaseEntity {
+    private UUID id;
+
+    {
+        this.id = UUID.randomUUID();
+    }
 }
